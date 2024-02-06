@@ -4,60 +4,69 @@ format: html
 editor: visual
 ---
 
-# Exercise 1
+Please note that during the course of this exercise, I navigated between directories to complete tasks, and in the end, commit my work to GitHub. As such, including live code in Quatro does not work as it the changing of directory changes past code. For that reason, I have include copies of the actual code that was written in terminal.
+
+# [Exercise 1]{.underline}
 
 ## Home directory
 
-```{bash}
-pwd
-```
+### Using the command 'pwd' allows us to see the original home directory
+
+| "`Benjamins-MacBook-Air:~ benjaminpletta$`
+| `pwd /Users/benjaminpletta`"
 
 ## The following files exist in my home directory
 
-```{bash}
-ls
-```
+| "`Benjamins-MacBook-Air:~ benjaminpletta$ ls`
+| `Applications Documents Homework_Pletta Movies Pictures benzap.txt Desktop Downloads Library Music Public datascience`"
 
-# Exercise 2
+# [Exercise 2]{.underline}
 
 ## The following command brings me back to my root by calling directory
 
-```{bash}
-cd ~/../../..
-```
+| "`Benjamins-MacBook-Air:~ benjaminpletta$ cd ~/../../..`
+| `Benjamins-MacBook-Air:/ benjaminpletta$ ls`
+| `Applications Users cores home sbin var Library Volumes dev opt tmp System bin etc private usr`"
 
 ## I subsequently the move back to the folder where I am saving this exercise and use ls to verify, see screenshot from terminal
 
-```{bash}
-cd /Users/benjaminpletta/Documents/datascience/Homework_1
-```
+| "`Benjamins-MacBook-Air:/ benjaminpletta$ cd /Users/benjaminpletta/Documents/datascience/Homework_1 Benjamins-MacBook-Air:Homework_1 benjaminpletta$ ls Homework_Pletta`"
 
--   Please note that from here, Quatro will not recognize the above 'cd' command and so I cannot accurately use the code in the qmd file. The direct results for the remaining questions were completed in Terminal and include screenshots.
+# [Exercise 3]{.underline}
 
-# Exercise 3
+### To read the manual for 'ls', I entered the command 'man ls'. the Command ls lists directory content. the '-l' flag (lowercase letter "ell") lists files in the long format. See copy of command and examples below (I have no files in the folder as of yet, just GitHub directory that I created for submitting the assignment).
 
-### To read the manual for 'ls', I entered the command 'man ls'. the Command ls lists directory content. the '-l' flag (lowercase letter "ell") lists files in the long format. See screenshot of command and examples below (I have no files in the folder as of yet, just GitHub directory that I created for submitting the assignment).
+| "`Benjamins-MacBook-Air:Homework_1 benjaminpletta$ man ls`
+| `Benjamins-MacBook-Air:Homework_1 benjaminpletta$ ls -l`
+| `total 0 drwxr-xr-x@ 4 benjaminpletta staff 128 Feb 4 23:56 Homework_Pletta`"
 
-![](images/1C899470-64C7-443D-9959-8AC38DBE00EB_4_5005_c.jpeg)
+# [Exercise 4]{.underline}
 
-# Exercise 4
+## I created "myfile.txt". Running the 'stat' command provides information on access and date/time creation. See code below.
 
-## I created "myfile.txt". Running the 'stat' command provides information on access and date/time creation. See screenshot below.
+| "`Benjamins-MacBook-Air:Homework_1 benjaminpletta$ touch myfile.txt`
+| `Benjamins-MacBook-Air:Homework_1 benjaminpletta$ stat myfile.txt`
+| `16777234 11215483 -rw-r--r-- 1 benjaminpletta staff 0 0 "Feb 5 19:20:34 2024" "Feb 5 19:20:34 2024" "Feb 5 19:20:34 2024" "Feb 5 19:20:34 2024" 4096 0 0 myfile.txt`"
 
-# ![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/9/9B6332CB-6DE6-425D-A379-04AB541D0A19_4_5005_c.jpeg)Exercise 5
+# [Exercise 5]{.underline}
 
-## When running the command 'ls -l otherfile.txt myfile.txt', it returns info on access and date/time for all listed files. See screenshot below.
+## When running the command 'ls -l otherfile.txt myfile.txt', it returns info on access and date/time for all listed files. See code below.
 
-![](images/EB319192-EFF2-4F06-B828-34D3060BE9CF_4_5005_c.jpeg)
+| "`Benjamins-MacBook-Air:Homework_1 benjaminpletta$ ls -l otherfile.txt myfile.txt`
+| `-rw-r--r--@ 1 benjaminpletta staff 0 Feb 5 19:20 myfile.txt`
+| `-rw-r--r--@ 1 benjaminpletta staff 0 Feb 5 19:21 otherfile.txt`"
 
-# Exercise 6
+# [Exercise 6]{.underline}
 
-## Adding to myfile.txt using echo command, then running cat to verify
+## Adding to "myfile.txt" using echo command, then running cat to verify
 
-![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/3/3D413385-16A2-494F-9EB9-CDF3CF7B31B6_4_5005_c.jpeg)
+| "`Benjamins-MacBook-Air:Homework_1 benjaminpletta$ echo "This line is my first line" >> myfile.txt Benjamins-MacBook-Air:Homework_1 benjaminpletta$ cat myfile.txt`
+| `This line is my first line`"
 
-# Exercise 7
+# [Exercise 7]{.underline}
 
-## Running touch on myfile.txt does update it. Verified with the ls -l
+## Running touch on "myfile.txt" does update it, as the time has changed. Verified with the 'ls -l' command. See code below.
 
-![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/C/CB114CC7-C473-40D4-A3D8-0F0552FE5FDF_4_5005_c.jpeg)
+| "`Benjamins-MacBook-Air:Homework_1 benjaminpletta$ touch myfile.txt`
+| `Benjamins-MacBook-Air:Homework_1 benjaminpletta$ ls -l myfile.txt`
+| `-rw-r--r--@ 1 benjaminpletta staff 27 Feb 5 19:26 myfile.txt`"

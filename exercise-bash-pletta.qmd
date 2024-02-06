@@ -1,0 +1,63 @@
+---
+title: "exercise-bash-pletta"
+format: html
+editor: visual
+---
+
+# Exercise 1
+
+## Home directory
+
+```{bash}
+pwd
+```
+
+## The following files exist in my home directory
+
+```{bash}
+ls
+```
+
+# Exercise 2
+
+## The following command brings me back to my root by calling directory
+
+```{bash}
+cd ~/../../..
+```
+
+## I subsequently the move back to the folder where I am saving this exercise and use ls to verify, see screenshot from terminal
+
+```{bash}
+cd /Users/benjaminpletta/Documents/datascience/Homework_1
+```
+
+-   Please note that from here, Quatro will not recognize the above 'cd' command and so I cannot accurately use the code in the qmd file. The direct results for the remaining questions were completed in Terminal and include screenshots.
+
+# Exercise 3
+
+### To read the manual for 'ls', I entered the command 'man ls'. the Command ls lists directory content. the '-l' flag (lowercase letter "ell") lists files in the long format. See screenshot of command and examples below (I have no files in the folder as of yet, just GitHub directory that I created for submitting the assignment).
+
+![](images/1C899470-64C7-443D-9959-8AC38DBE00EB_4_5005_c.jpeg)
+
+# Exercise 4
+
+## I created "myfile.txt". Running the 'stat' command provides information on access and date/time creation. See screenshot below.
+
+# ![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/9/9B6332CB-6DE6-425D-A379-04AB541D0A19_4_5005_c.jpeg)Exercise 5
+
+## When running the command 'ls -l otherfile.txt myfile.txt', it returns info on access and date/time for all listed files. See screenshot below.
+
+![](images/EB319192-EFF2-4F06-B828-34D3060BE9CF_4_5005_c.jpeg)
+
+# Exercise 6
+
+## Adding to myfile.txt using echo command, then running cat to verify
+
+![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/3/3D413385-16A2-494F-9EB9-CDF3CF7B31B6_4_5005_c.jpeg)
+
+# Exercise 7
+
+## Running touch on myfile.txt does update it. Verified with the ls -l
+
+![](Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/C/CB114CC7-C473-40D4-A3D8-0F0552FE5FDF_4_5005_c.jpeg)

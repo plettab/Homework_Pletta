@@ -46,5 +46,27 @@ means
 hist(means, breaks = 30, col = "green", main = "Distribution",
      xlab = "Mean", ylab = "Frequency")
 
+# 2a
 
+new_func_2 <- function(samples) {
+  observations <- rexp(samples, rate =1)
+  return(mean(observations))
+}
+
+means2 <- map_dbl(1:10000, ~ new_func_2(5))
+
+hist(means2, breaks = 30, col = "blue", main = "Distribution",
+     xlab = "Mean", ylab = "Frequency")
+
+# 2b
+
+new_func_3 <- function(samples) {
+  observations <- rexp(samples, rate =1)
+  return(mean(observations))
+}
+
+means3 <- replicate(10000, new_func_3(5))
+
+hist(means3, breaks = 30, col = "red", main = "Distribution",
+     xlab = "Mean", ylab = "Frequency")
 

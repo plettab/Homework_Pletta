@@ -15,3 +15,7 @@ dt
 # 1_a
 
 map_dbl(dt, mean)
+
+# 1_b
+
+map_dbl(dt, sd)

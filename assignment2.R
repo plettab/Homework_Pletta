@@ -70,3 +70,21 @@ means3 <- replicate(10000, new_func_3(5))
 hist(means3, breaks = 30, col = "red", main = "Distribution",
      xlab = "Mean", ylab = "Frequency")
 
+# 2c
+
+new_func_4 <- function(samples) {
+  observations <- rexp(samples, rate =1)
+  return(mean(observations))
+}
+
+samples2c <- c(5, 10, 20)
+
+for (size in samples2c){
+  means4 <- replicate(10000, new_func_4(size))
+  
+  hist(means4, breaks = 30, col = "skyblue", 
+       main = paste("Distribution of Means (Sample Size =", size, ")"),
+       xlab = "Mean", ylab = "Frequency")
+}
+
+

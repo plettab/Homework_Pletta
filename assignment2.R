@@ -28,4 +28,23 @@ map(dt, sqrt)
 
 map(dt, summary)
 
+# 2 
+
+new_func_1 <- function(iterations = 10000, samples = 5) {
+  means <- numeric(iterations)
+  for (i in 1:iterations) {
+    observations <- rexp(samples, rate = 1)
+    means[i] <- mean(observations)
+  }
+  return(means)
+}
+
+means <- new_func_1()
+
+means
+
+hist(means, breaks = 30, col = "green", main = "Distribution",
+     xlab = "Mean", ylab = "Frequency")
+
+
 

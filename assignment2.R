@@ -87,4 +87,17 @@ for (size in samples2c){
        xlab = "Mean", ylab = "Frequency")
 }
 
+# 3
+
+mtcars_sd <- vector("double", ncol(mtcars)) 
+for (i in seq_along(df)) {
+  mtcars_sd[[i]] <- sd(mtcars[[i]])
+}
+
+mtcars_sd
+
+view(mtcars_sd)
+
+view(mtcars)
+
 

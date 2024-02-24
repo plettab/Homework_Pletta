@@ -1,0 +1,37 @@
+---
+title: "assign3"
+output: html_document
+date: "2024-02-24"
+---
+
+# Problem 1
+
+### Calculating proportion of rides made on a given day where Sunday is the given day
+
+```{r}
+wmata$Date <- ymd(wmata$Date)
+
+Sunday <- wmata%>%
+  filter(., wday(Date) == 07)%>%
+  group_by(., month(Date, label = TRUE))%>%
+  summarize(., ridecount = n())
+
+print(Sunday)
+```
+
+### Proportion of ridership vs day of week
+
+```{r}
+bplot <- wmata%>%
+  filter(., year(Date) != 2004 & year(Date) != 2005)%>%
+  mutate(weekday = wday(Date, label = TRUE))%>%
+  ggplot(aes(x = weekday, y = Total)) +
+  geom_boxplot() +
+  labs(x = "Days of the Week", y = "Proportion of Total Rides") +
+  ggtitle("WMATA Ridership")
+```
+
+```{r bplot, echo=FALSE}
+plot(bplot)
+```
+
